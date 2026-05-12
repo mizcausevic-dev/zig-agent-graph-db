@@ -12,7 +12,8 @@ This log is intentionally written as an engineering record rather than a launch 
 - Tightened the repo story around the real-world operating problem: fragmented operational evidence, workflow drift, and weak ownership visibility.
 
 ### Why this mattered
-- Existing approaches in dashboards, internal tools, and line-of-business systems were useful, but they captured activity, but often missed the governance, decision, and operational evidence layer between raw state and human action.
+- Existing approaches in dashboards, internal tools, and line-of-business systems were useful for adjacent workflows.
+- They still missed the core need: a clearer layer that could connect raw state to ownership, evidence, and next action.
 - This release made the repo readable as an operational capability rather than a narrow technical demo.
 
 ## [0.1.0] - 2026-02-15
