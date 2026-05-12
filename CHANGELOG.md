@@ -1,70 +1,48 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to this project are documented here.
-
-This log is intentionally written as an engineering record rather than a launch theater timeline. Dates reflect when the concept, design, prototype, and public packaging phases were mature enough to document.
 
 ## [1.0.0] - 2026-05-12
 
 ### Released
-- Published **zig-agent-graph-db** as a public, portfolio-grade enterprise software operations system.
-- Packaged the current implementation, documentation, validation workflow, and proof surfaces into a repo that could be reviewed by engineering, product, and operating stakeholders.
-- Tightened the repo story around the real-world operating problem: fragmented operational evidence, workflow drift, and weak ownership visibility.
+- Released **zig-agent-graph-db** publicly as a reviewable operating system for enterprise software operations.
+- Packaged the current implementation, documentation, validation flow, and proof surfaces into a repo that can be reviewed by technical and operating stakeholders.
+- Clarified the core problem the project is addressing: fragmented workflow state, weak ownership visibility, and too much manual reconstruction during decision-making.
 
 ### Why this mattered
-- Existing approaches in dashboards, internal tools, and line-of-business systems were useful for adjacent workflows.
-- They still missed the core need: a clearer layer that could connect raw state to ownership, evidence, and next action.
-- This release made the repo readable as an operational capability rather than a narrow technical demo.
+- Existing approaches in internal tools, dashboards, tickets, and line-of-business systems were useful for parts of the workflow.
+- They still left out a tighter operating layer that made evidence, ownership, and action easier to connect.
+- This release made the repo read like an operational capability rather than a narrow technical demo.
 
-## [0.1.0] - 2026-02-15
+## [0.1.0] - 2026-02-19
 
 ### Shipped
-- Cut the first coherent internal version of the product shape behind **zig-agent-graph-db**.
-- Standardized the core objects, decision surfaces, and operator outputs around the repo's main working problem.
+- Cut the first coherent internal version of **zig-agent-graph-db** with stable domain objects, review surfaces, and decision outputs.
 - Established the first reviewable version of the architecture described as: In-memory directed graph DB in Zig for AI agent context graphs. Typed nodes (agent, tool, fact, result, citation), labeled edges, BFS traversal, JSON serialization. Pure Zig stdlib, zero deps.
+- Focused the repo around actionability instead of passive reporting.
 
-### Notes
-- This milestone was less about polish and more about proving the operating model.
-- The emphasis was on turning a messy domain problem into something a real team could reason about in CI, review, or day-to-day operations.
-
-## [Prototype] - 2025-07-14
+## [Prototype] - 2025-02-20
 
 ### Built
-- Created the first runnable prototype for the repo's core workflow and decision model.
-- Started validating the design against real operating pressures instead of idealized sample flows.
-- Added enough shape to test whether the project could surface action, not just information.
+- Built the first runnable prototype for the repo's main workflow and decision model.
+- Validated the concept against pressure points such as fragmented operational evidence, workflow drift, and weak ownership visibility.
+- Used the prototype phase to test whether the project could drive action, not just present information.
 
-### Problem pressure
-- The prototype phase was shaped by concrete issues such as fragmented operational evidence, workflow drift, and weak ownership visibility.
-- This was the point where the project moved from a sketch into something worth hardening.
-
-## [Design Phase] - 2022-09-11
+## [Design Phase] - 2022-12-14
 
 ### Designed
-- Defined the core philosophy for the system:
-  - operator-first
-  - decision-legible
-  - CI- and review-friendly
-  - suitable for mixed technical and business audiences
-- Chose outputs that would make the repo useful to real operators instead of just visually impressive.
-- Focused the design on explainability, evidence, and next-best action rather than passive reporting.
+- Defined the system around operator-first and decision-legible outputs.
+- Chose interfaces and examples that made sense for platform, operations, and product teams.
+- Avoided reducing the project to a generic dashboard, CRUD app, or fashionable wrapper around the stack.
 
-### Rejected approaches
-- Avoided turning the repo into a generic dashboard or CRUD exercise.
-- Avoided thin wrapper patterns that would hide the actual operating problem behind fashionable tooling choices.
-
-## [Idea Origin] - 2022-02-11
+## [Idea Origin] - 2022-02-14
 
 ### Observed
-- The initial idea surfaced while looking at how teams were handling fragmented operational evidence, workflow drift, and weak ownership visibility.
-- The recurring pattern was that people could often see fragments of the problem, but not the whole operational story in one place.
-
-### Insight
-- The missing product was not another point solution. It was a clearer operating layer that made the work legible to platform and business operations teams.
-- That insight became the basis for **zig-agent-graph-db**.
+- The original idea surfaced while looking at how teams were handling fragmented workflow state, weak ownership visibility, and too much manual reconstruction during decision-making.
+- The recurring pattern was that teams had data and tools, but still lacked a usable operating layer for the hardest decisions.
 
 ## [Background Signals] - 2022-08-09
 
 ### Context
-- Earlier platform, governance, and operator-tooling work made one pattern obvious: the dangerous systems are rarely the ones with no controls at all. They are the ones where controls exist, but are fragmented, weakly owned, and hard to read under pressure.
-- That pattern shaped this project long before the public repo existed.
+- Earlier platform, governance, and operator-tooling work made one pattern hard to ignore: the systems that create the most drag are often the ones with partial controls and weak operational coherence, not the ones with no controls at all.
+- That pattern shaped the thinking behind this repo well before the public version existed.
